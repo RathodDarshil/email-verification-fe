@@ -53,8 +53,6 @@ class MyDocument extends Document {
                 </Head>
                 <body>
                     <Main />
-                    <NextScript />
-
                     <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin></script>
 
                     <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js" crossOrigin></script>
@@ -65,6 +63,7 @@ class MyDocument extends Document {
                     ></script>
 
                     <script>var Alert = ReactBootstrap.Alert;</script>
+                    <NextScript />
                 </body>
             </Html>
         );

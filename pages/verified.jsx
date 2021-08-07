@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button, Container, Form, Spinner, Toast } from "react-bootstrap";
 
-export default function verified() {
+export default function Verified() {
     const [email, setEmail] = useState();
     const router = useRouter();
 

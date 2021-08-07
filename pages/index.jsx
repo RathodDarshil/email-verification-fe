@@ -44,10 +44,12 @@ export default function Home() {
                 .then((res) => {
                     if (res.data.data.user_info.verified) {
                         router.push("/verified");
+                    } else {
+                        setLoading(false);
+                        setSent(true);
+                        console.log(res);
                     }
-                    setLoading(false);
-                    setSent(true);
-                    console.log(res);
+
                     localStorage.setItem("token", res.data.data.token);
                 })
                 .catch((e) => {
@@ -78,7 +80,6 @@ export default function Home() {
             <Container style={{ marginTop: "40px" }}>
                 <Toast show={showToast} onClose={() => setShowToast(false)} style={{ marginBottom: "40px" }}>
                     <Toast.Header>
-                        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
                         <strong className="me-auto">Signup Error</strong>
                     </Toast.Header>
                     <Toast.Body>Email or Password incorrect or account already exists</Toast.Body>
