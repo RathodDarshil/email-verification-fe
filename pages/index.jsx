@@ -66,7 +66,7 @@ export default function Home() {
 
     const handleLogout = () => {
         localStorage.removeItem("token");
-        router.push("/");
+        setSent(false);
     };
 
     return (
